@@ -1,5 +1,7 @@
 .List {
 	width: 500px;
+	max-width: 80%;
+	height: 300px;
 	padding: 25px;
 	background-color: #e6e6e6;
 
@@ -10,6 +12,7 @@
 
 		h1 {
 			color: #3f3f3f;
+			font-size: 20px;
 		}
 
 		i {
@@ -19,9 +22,11 @@
 			cursor: pointer;
 		}
 	}
-
-	hr {
-		margin: 10px 0;
+	
+	.ListContent {
+		height: calc(100% - 35px);
+		// padding-bottom: 40px;
+		overflow-y: auto;
 	}
 }
 
@@ -39,7 +44,7 @@
 		gap: 10px;
 
 		i {
-			font-size: 25px;
+			font-size: 20px;
 			color: #b0b0b0;
 			transition: 0.4s ease;
 			cursor: pointer;

@@ -52,15 +52,17 @@ export const List = ({ items, onChangeStaus, onRemove, onAdd }: ListProps) => {
 				></i>
 			</div>
 
-			{items?.map((item, i) => (
-				<div key={i}>
-					<Item
-						{...item}
-						onActionCheck={() => onChangeStaus(i)}
-						onActionTrash={() => onRemove(i)}
-					/>
-				</div>
-			))}
+			<div className={styles.ListContent}>
+				{items?.map((item, i) => (
+					<div key={i}>
+						<Item
+							{...item}
+							onActionCheck={() => onChangeStaus(i)}
+							onActionTrash={() => onRemove(i)}
+						/>
+					</div>
+				))}
+			</div>
 		</section>
 	)
 }

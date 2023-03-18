@@ -1,8 +1,22 @@
 import { useState } from 'react'
-import { Item, List } from '../../components/List'
+import { List } from '../../components/List'
 import styles from './index.module.scss'
 
-const itemsList = []
+const itemsList = [
+	{ name: 'teste', status: false },
+	{ name: 'teste', status: true },
+	{ name: 'teste', status: false },
+	{ name: 'teste', status: true },
+	{ name: 'teste', status: false },
+	{ name: 'teste', status: false },
+	{ name: 'teste', status: true },
+	{ name: 'teste', status: true },
+	{ name: 'teste', status: true },
+	{ name: 'teste', status: false },
+	{ name: 'teste', status: false },
+	{ name: 'teste', status: true },
+	{ name: 'teste', status: false },
+]
 
 const HomePage = () => {
 	const [list, setList] = useState(itemsList)
