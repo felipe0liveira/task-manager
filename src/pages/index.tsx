@@ -1,10 +1,7 @@
+import HomePage from '../templates/Home'
+
 const IndexPage = () => {
-	return (
-		<>
-			<h1>minimal-next-app</h1>
-			<p>(Javascript Boilerplate)</p>
-		</>
-	)
+	return <HomePage />
 }
 
 export default IndexPage

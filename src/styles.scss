@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
+@import url('https://unicons.iconscout.com/release/v4.0.0/css/line.css');
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+body {
+	background-color: #fafafa;
+	font-family: 'Noto Sans Lepcha', sans-serif;
+	color: #424242;
+
+	*.hover-danger:hover {
+		color: #be3d3d !important;
+	}
+
+	*.hover-success:hover {
+		color: #3dbe48 !important;
+	}
+}

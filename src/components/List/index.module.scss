@@ -1,0 +1,52 @@
+.List {
+	width: 500px;
+	padding: 25px;
+	background-color: #e6e6e6;
+
+	.Header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 15px;
+
+		h1 {
+			color: #8b8b8b;
+		}
+
+		i {
+			font-size: 30px;
+			color: #4f92c5;
+			cursor: pointer;
+		}
+	}
+
+	hr {
+		margin: 10px 0;
+	}
+}
+
+.Item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	span {
+		color: #8b8b8b;
+	}
+
+	div {
+		display: flex;
+		gap: 10px;
+
+		i {
+			font-size: 30px;
+			color: #b0b0b0;
+			transition: 0.4s ease;
+
+			&:hover {
+				cursor: pointer;
+				color: #2d2d2d;
+			}
+		}
+	}
+}
