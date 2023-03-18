@@ -2,14 +2,7 @@ import { useState } from 'react'
 import { Item, List } from '../../components/List'
 import styles from './index.module.scss'
 
-const itemsList = [
-	{ name: 'Halga algo 1', status: false },
-	{ name: 'Halga algo 2', status: false },
-	{ name: 'Halga algo 3', status: false },
-	{ name: 'Halga algo 4', status: false },
-	{ name: 'Halga algo 5', status: false },
-	{ name: 'Halga algo 6', status: false },
-]
+const itemsList = []
 
 const HomePage = () => {
 	const [list, setList] = useState(itemsList)
@@ -21,13 +14,16 @@ const HomePage = () => {
 	}
 
 	const handleRemove = (i) => {
-		setList(list.filter((_, b) => b != i))
+		const confirmMessage = `Are you sure that you want to remove this item from the list:\n"${list[i].name}"`
+		if (confirm(confirmMessage)) setList(list.filter((_, b) => b != i))
 	}
 
 	const handleAddItem = () => {
 		const newItem = prompt('Add a new Task item to your list.')
 
-		setList((p) => [...p, { name: newItem, status: false }])
+		if (newItem) {
+			setList((p) => [...p, { name: newItem, status: false }])
+		}
 	}
 
 	return (

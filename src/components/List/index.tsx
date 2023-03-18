@@ -24,11 +24,14 @@ export const Item = ({
 		<div className={styles.Item}>
 			<span>{name}</span>
 			<div>
-				<i onClick={onActionTrash} className='uil uil-trash hover-danger' />
+				<i
+					onClick={onActionTrash}
+					className='uil uil-trash hover-text-danger'
+				/>
 				<i
 					onClick={onActionCheck}
-					className={`uil ${
-						status ? 'uil-check-square hover-success' : 'uil-square-full'
+					className={`uil hover-text-success ${
+						status ? 'uil-check-square text-success' : 'uil-square-full'
 					}`}
 				/>
 			</div>
@@ -40,14 +43,18 @@ export const List = ({ items, onChangeStaus, onRemove, onAdd }: ListProps) => {
 	return (
 		<section className={styles.List}>
 			<div className={styles.Header}>
-				<h1>Task Manager</h1>
-				<i onClick={onAdd} className='uil uil-plus-square'></i>
+				<h1 style={{ marginBottom: items.length ? '15px' : 'none' }}>
+					Task Manager
+				</h1>
+				<i
+					onClick={onAdd}
+					className='uil uil-plus-square hover-text-primary'
+				></i>
 			</div>
 
 			{items?.map((item, i) => (
-				<div>
+				<div key={i}>
 					<Item
-						key={i}
 						{...item}
 						onActionCheck={() => onChangeStaus(i)}
 						onActionTrash={() => onRemove(i)}

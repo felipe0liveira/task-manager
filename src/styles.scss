@@ -8,15 +8,22 @@
 }
 
 body {
-	background-color: #fafafa;
+	background-color: #303030;
 	font-family: 'Noto Sans Lepcha', sans-serif;
 	color: #424242;
 
-	*.hover-danger:hover {
+	.text-danger,
+	.hover-text-danger:hover {
 		color: #be3d3d !important;
 	}
 
-	*.hover-success:hover {
+	.text-success,
+	.hover-text-success:hover {
 		color: #3dbe48 !important;
+	}
+
+	.text-primary,
+	.hover-text-primary:hover {
+		color: #3d82be !important;
 	}
 }

@@ -7,15 +7,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 15px;
 
 		h1 {
-			color: #8b8b8b;
+			color: #3f3f3f;
 		}
 
 		i {
 			font-size: 30px;
-			color: #4f92c5;
+			color: #b0b0b0;
+			transition: 0.4s ease;
 			cursor: pointer;
 		}
 	}
@@ -39,14 +39,10 @@
 		gap: 10px;
 
 		i {
-			font-size: 30px;
+			font-size: 25px;
 			color: #b0b0b0;
 			transition: 0.4s ease;
-
-			&:hover {
-				cursor: pointer;
-				color: #2d2d2d;
-			}
+			cursor: pointer;
 		}
 	}
 }
