@@ -1,0 +1,26 @@
+{
+	"name": "minimal-next-app",
+	"version": "1.0.0",
+	"description": "This is a minimal react/next dependencies you'll need to start coding",
+	"scripts": {
+		"dev": "next dev",
+		"start": "next start",
+		"build": "next build",
+		"build-static": "next build && next export"
+	},
+	"private": false,
+	"dependencies": {
+		"next": "^13.2.4",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "18.15.3",
+		"@types/react": "18.0.28",
+		"prettier": "^2.8.4",
+		"typescript": "5.0.2"
+	},
+	"repository": "git@github.com:felipe0liveira/minimal-next-app.git",
+	"author": "Felipe Oliveira <felpd3v@gmail.com>",
+	"license": "MIT"
+}
