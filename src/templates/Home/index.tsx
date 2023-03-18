@@ -1,22 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { List } from '../../components/List'
 import styles from './index.module.scss'
 
-const itemsList = [
-	{ name: 'teste', status: false },
-	{ name: 'teste', status: true },
-	{ name: 'teste', status: false },
-	{ name: 'teste', status: true },
-	{ name: 'teste', status: false },
-	{ name: 'teste', status: false },
-	{ name: 'teste', status: true },
-	{ name: 'teste', status: true },
-	{ name: 'teste', status: true },
-	{ name: 'teste', status: false },
-	{ name: 'teste', status: false },
-	{ name: 'teste', status: true },
-	{ name: 'teste', status: false },
-]
+const itemsList = []
 
 const HomePage = () => {
 	const [list, setList] = useState(itemsList)
@@ -39,6 +25,27 @@ const HomePage = () => {
 			setList((p) => [...p, { name: newItem, status: false }])
 		}
 	}
+
+	// useEffect(() => {
+	// 	const storedList = localStorage.getItem('task-manager-list')
+	// 	if (storedList) {
+	// 		const sessionList = JSON.parse(storedList)
+
+	// 		if ('length' in sessionList) {
+	// 			setList(sessionList)
+	// 		}
+	// 	}
+
+	// 	function handleBeforeUnload() {
+	// 		localStorage.setItem('task-manager-list', JSON.stringify(list))
+	// 	}
+
+	// 	window.addEventListener('beforeunload', handleBeforeUnload)
+
+	// 	return () => {
+	// 		window.removeEventListener('beforeunload', handleBeforeUnload)
+	// 	}
+	// }, [list])
 
 	return (
 		<main className={styles.HomePage}>
